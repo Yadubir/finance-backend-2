@@ -1,0 +1,56 @@
+-------------------------------------------------------------------------------
+Test set: com.finance.service.FinancialRecordServiceTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.073 s <<< FAILURE! -- in com.finance.service.FinancialRecordServiceTest
+com.finance.service.FinancialRecordServiceTest.getRecordById_missing_throwsNotFoundException -- Time elapsed: 0.052 s <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.finance.service.FinancialRecordServiceTest.mockSecurityContext(FinancialRecordServiceTest.java:175)
+  2. -> at com.finance.service.FinancialRecordServiceTest.mockSecurityContext(FinancialRecordServiceTest.java:176)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.finance.service.FinancialRecordServiceTest.deleteRecord_alreadyDeleted_throwsNotFoundException -- Time elapsed: 0.002 s <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.finance.service.FinancialRecordServiceTest.mockSecurityContext(FinancialRecordServiceTest.java:175)
+  2. -> at com.finance.service.FinancialRecordServiceTest.mockSecurityContext(FinancialRecordServiceTest.java:176)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.finance.service.FinancialRecordServiceTest.getRecords_returnsPagedResponse -- Time elapsed: 0.008 s <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.finance.service.FinancialRecordServiceTest.mockSecurityContext(FinancialRecordServiceTest.java:175)
+  2. -> at com.finance.service.FinancialRecordServiceTest.mockSecurityContext(FinancialRecordServiceTest.java:176)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+com.finance.service.FinancialRecordServiceTest.getRecordById_existing_returnsResponse -- Time elapsed: 0.002 s <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.finance.service.FinancialRecordServiceTest.mockSecurityContext(FinancialRecordServiceTest.java:175)
+  2. -> at com.finance.service.FinancialRecordServiceTest.mockSecurityContext(FinancialRecordServiceTest.java:176)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+	at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:192)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: finance-backend
+  datasource:
+    url: jdbc:h2:file:./data/financedb;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update        # update preserves data; use 'create-drop' for clean slate in dev
+    show-sql: false           # flip to true for debugging SQL queries
+    open-in-view: false       # avoids lazy-loading pitfalls and improves connection pool usage
+
+  h2:
+    console:
+      enabled: true           # browse http://localhost:8080/h2-console in dev
+      path: /h2-console
+
+  sql:
+    init:
+      mode: never             # seeding handled by DataSeeder.java (uses Spring's PasswordEncoder at runtime)
+
+# JWT Configuration
+# Tradeoff: Secret is here for simplicity. In production, use environment variables
+# or a secrets manager (AWS Secrets Manager, Vault, etc.)
+app:
+  jwt:
+    secret: "7f3e2b1c9d4a5e8f0a2b4c6d8e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f"
+    expiration-ms: 86400000   # 24 hours
+
+# SpringDoc / Swagger UI
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+
+logging:
+  level:
+    com.finance: DEBUG
+    org.springframework.security: INFO

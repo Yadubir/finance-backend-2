@@ -1,0 +1,4 @@
+com/finance/controller/IntegrationTest.class
+com/finance/service/AuthServiceTest.class
+com/finance/service/FinancialRecordServiceTest.class
+com/finance/service/UserServiceTest.class

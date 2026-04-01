@@ -1,0 +1,28 @@
+# Test profile — overrides application.yml
+# Uses in-memory H2 (not file-based) so each test run starts fresh
+# and tests don't bleed into each other or corrupt dev data.
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop   # fresh schema per test run
+    show-sql: false
+
+  sql:
+    init:
+      mode: never   # DataSeeder handles test data too, via CommandLineRunner
+
+# Use a shorter BCrypt cost in tests — strength 4 is ~10ms vs ~300ms at strength 12
+# Tradeoff: tests run faster; we never use this in production (profile-separated)
+# Note: override this by providing a test-specific SecurityConfig bean if needed.
+
+app:
+  jwt:
+    secret: "test-secret-key-for-unit-tests-only-not-for-production-usage-ever"
+    expiration-ms: 3600000  # 1 hour
